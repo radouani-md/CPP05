@@ -4,9 +4,9 @@ CFLAGS = -Wextra -Wall -Werror -std=c++98
 
 CC = c++
 
-SRC = Bureaucrat.cpp main.cpp
+SRC = Bureaucrat.cpp main.cpp Form.cpp
 
-SRC_H = Bureaucrat.hpp
+SRC_H = Bureaucrat.hpp Form.hpp
 
 OBJ = $(SRC:.cpp=.o)
 

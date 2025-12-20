@@ -1,12 +1,16 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 
 int main()
 {
     try
     {
-        Bureaucrat obj1("mohammed", 0);
-        obj1.decrementGrade();
+        Bureaucrat obj1("mohammed", 5);
+        Form obj2("Bahmaz", 10, 1);
+        obj2.beSigned(obj1);
+        obj1.signForm(obj2);
+        std::cout << obj2 << std::endl;
         std::cout << obj1 << std::endl;
     }
     catch (const Bureaucrat::GradeTooHighException& e)
@@ -16,6 +20,14 @@ int main()
     catch (const Bureaucrat::GradeTooLowException& e)
     {
         std::cout << "Bureaucrat::" << e.what() << std::endl;
+    }
+    catch (const Form::GradeTooHighException& e)
+    {
+        std::cout << "Form::" << e.what() << std::endl;
+    }
+    catch (const Form::GradeTooLowException& e)
+    {
+        std::cout << "Form::" << e.what() << std::endl;
     }
    
 }
