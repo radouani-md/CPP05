@@ -5,7 +5,7 @@ int main()
 {
     try
     {
-        Bureaucrat obj1("mohammed", 0);
+        Bureaucrat obj1("mohammed", 1);
         obj1.decrementGrade();
         std::cout << obj1 << std::endl;
     }

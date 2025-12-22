@@ -27,10 +27,7 @@ void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 
     file.open(target.c_str());
     if (!file.is_open())
-    {
-        std::cout << "Failed to Open the file" << std::endl;
-        return ;
-    }
+        throw std::runtime_error("Failed to Open the file") ;
     file <<
         "              &&& &&  & &&\n"
         "          && &\\/&\\|& ()|/ @, &&\n"

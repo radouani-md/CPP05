@@ -36,24 +36,25 @@ int Bureaucrat::getGrade() const
 
 void    Bureaucrat::incrementGrade()
 {
-    if (getGrade() + 1 > 150)
+    if (grade - 1 > 150)
         throw Bureaucrat::GradeTooLowException();
     else
-        setGrade(getGrade() + 1);
+        grade--;
 }
 
 void    Bureaucrat::decrementGrade()
 {
-     if (getGrade() - 1 < 1)
+     if (grade + 1 < 1)
         throw Bureaucrat::GradeTooHighException();
     else
-        setGrade(getGrade() - 1);
+        grade++;
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
     return "Grade too low!";
 }
+
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
     return "Grade too high!";

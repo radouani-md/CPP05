@@ -33,5 +33,6 @@ AForm*  Intern::makeForm(std::string formName, std::string formTarget)
             return ((this->*ptr[i])(formTarget));
         }
     }
-    throw std::runtime_error("No Form found");
+    std::cout << " Form Not Found" << std::endl;
+    return (NULL);
 }
