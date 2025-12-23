@@ -13,21 +13,9 @@ int main()
         std::cout << obj2 << std::endl;
         std::cout << obj1 << std::endl;
     }
-    catch (const Bureaucrat::GradeTooHighException& e)
+    catch (const std::exception& e)
     {
-        std::cout << "Bureaucrat::" << e.what() << std::endl;
-    }
-    catch (const Bureaucrat::GradeTooLowException& e)
-    {
-        std::cout << "Bureaucrat::" << e.what() << std::endl;
-    }
-    catch (const Form::GradeTooHighException& e)
-    {
-        std::cout << "Form::" << e.what() << std::endl;
-    }
-    catch (const Form::GradeTooLowException& e)
-    {
-        std::cout << "Form::" << e.what() << std::endl;
+        std::cout << e.what() << std::endl;
     }
    
 }

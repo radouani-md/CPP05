@@ -11,6 +11,6 @@ int main()
     }
     catch (const std::exception &e)
     {
-        std::cout << "Bureaucrat::" << e.what() << std::endl;
+        std::cout << e.what() << std::endl;
     }
 }
